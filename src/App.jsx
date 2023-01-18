@@ -12,6 +12,7 @@ function App() {
   useEffect(()=>{
     consultarApi().then((respuesta)=>{
       console.log(respuesta);
+      setTarea(respuesta);
     });
   },[]);
   return (
@@ -23,7 +24,7 @@ function App() {
       </section>
       <AgregarTarea />
       <hr />
-     <Tareas/>
+     <Tareas tarea={tarea}/>
     </Container>
     </section>
   );

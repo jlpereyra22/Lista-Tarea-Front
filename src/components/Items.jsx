@@ -1,12 +1,16 @@
-import ListGroup from 'react-bootstrap/ListGroup';
+import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/Button";
 
-const Items = () => {
+const Items = ({ tarea }) => {
   return (
-    <ListGroup.Item className="d-flex justify-content-between m-1">Cras justo odio
-        <div><Button className='mx-2' variant="warning">Warning</Button>
+    <ListGroup.Item className="d-flex justify-content-between m-1">
+      {tarea.nombre}
+      <div>
+        <Button className="mx-2" variant="warning">
+          Warning
+        </Button>
         <Button variant="danger">Danger</Button>
-        </div>
+      </div>
     </ListGroup.Item>
   );
 };

@@ -3,10 +3,11 @@ import Items from "./Items";
 
 
 
-const Tareas = () => {
+const Tareas = (props) => {
     return (
         <ListGroup>
-       <Items/>
+         
+         {props.tarea.map((tarea,index)=><Items key={index} tarea={tarea}/>)}
         
       </ListGroup>
     );
