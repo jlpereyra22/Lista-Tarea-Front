@@ -2,6 +2,8 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "../src/style.css"
 import { Container } from "react-bootstrap";
 import AgregarTarea from "./components/AgregarTarea";
+import Tareas from "./components/Tareas";
+
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
         <hr />
       </section>
       <AgregarTarea />
+      <hr />
+     <Tareas/>
     </Container>
     </section>
   );
