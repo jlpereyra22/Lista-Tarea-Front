@@ -1,7 +1,12 @@
 {
   "tareas": [
-    { "nombre": "Prueba N°1 de tareas" },
-    { "nombre": "Prueba N°2 de tareas" },
-    { "nombre": "Prueba N°3 de tareas" }
+    {
+      "nombre": "probamos petision post",
+      "id": 1
+    },
+    {
+      "nombre": "probamos de nuevo la creacion automatica del id",
+      "id": 2
+    }
   ]
 }
