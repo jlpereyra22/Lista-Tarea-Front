@@ -24,7 +24,7 @@ function App() {
       </section>
       <AgregarTarea />
       <hr />
-     <Tareas tarea={tarea}/>
+     <Tareas tarea={tarea} />
     </Container>
     </section>
   );

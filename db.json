@@ -7,6 +7,38 @@
     {
       "nombre": "probamos de nuevo la creacion automatica del id",
       "id": 2
+    },
+    {
+      "nombre": "prueba",
+      "id": 3
+    },
+    {
+      "nombre": "probamos el renderizado",
+      "id": 4
+    },
+    {
+      "nombre": "renderizado",
+      "id": 5
+    },
+    {
+      "nombre": "renderizado",
+      "id": 6
+    },
+    {
+      "nombre": "renderizadox2",
+      "id": 7
+    },
+    {
+      "nombre": "pruebita",
+      "id": 8
+    },
+    {
+      "nombre": "agregar",
+      "id": 9
+    },
+    {
+      "nombre": "prueba",
+      "id": 10
     }
   ]
 }
