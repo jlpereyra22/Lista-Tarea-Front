@@ -8,7 +8,7 @@ const AgregarTarea = () => {
   const onSubmit=(datos)=>{
     console.log(datos);
     agregarTareaApi(datos).then((respuesta)=>{
-   
+      window.location.reload(true)
     });
    
   };
