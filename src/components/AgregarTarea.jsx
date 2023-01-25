@@ -1,29 +1,39 @@
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useForm } from "react-hook-form";
-import Swal from "sweetalert2";
-import { agregarTareaApi } from "./helpers/queries";
 
-const AgregarTarea = () => {
+import Swal from "sweetalert2";
+import { agregarTareaApi, consultarApi } from "./helpers/queries";
+
+const AgregarTarea = ({setTarea}) => {
+
+  
+ 
   const {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm();
+ 
   const onSubmit = (datos) => {
     console.log(datos);
     agregarTareaApi(datos).then((respuesta) => {
       if (respuesta.status === 201) {
+        consultarApi().then((respuesta)=>{
+          setTarea(respuesta)
+        })
         Swal.fire(
           "Tarea Agregada",
           "Agregaste la Tarea Correctamente",
           "success"
         );
+        reset();
+        
       } else {
         Swal.fire("Ocurrio un Error", "Vuelva a intentarlo mas Tarde", "error");
       }
-      //window.location.reload(true)
-      //con el codigo anterior fuerzo al viewport a renderizarse pero me saltea el sweetAlert, utilizare navegation
+      
     });
   };
   return (
