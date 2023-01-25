@@ -24,4 +24,19 @@ export const agregarTareaApi = async(tarea)=>{
     } catch (error) {
         console.log(error);
     }
+};
+
+export const deleteTareaApi = async(tarea)=>{
+    try {
+        const respuesta = await fetch(URL,{
+            method:"POST",
+            headers:{"Content-Type":"application/json"},
+            body:JSON.stringify(tarea)
+                
+        });
+       
+        return respuesta;
+    } catch (error) {
+        console.log(error);
+    }
 }
