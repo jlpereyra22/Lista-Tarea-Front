@@ -1,52 +1,24 @@
 {
   "tareas": [
     {
-      "nombre": "probamos petision post",
-      "id": 1
+      "nombre": "otra prueba de sweet",
+      "id": 15
     },
     {
-      "nombre": "probamos de nuevo la creacion automatica del id",
-      "id": 2
+      "nombre": "prueba de renderisazo",
+      "id": 16
     },
     {
-      "nombre": "prueba",
-      "id": 3
+      "nombre": "tt",
+      "id": 17
     },
     {
-      "nombre": "probamos el renderizado",
-      "id": 4
+      "nombre": "ff",
+      "id": 18
     },
     {
-      "nombre": "renderizado",
-      "id": 5
-    },
-    {
-      "nombre": "renderizado",
-      "id": 6
-    },
-    {
-      "nombre": "renderizadox2",
-      "id": 7
-    },
-    {
-      "nombre": "pruebita",
-      "id": 8
-    },
-    {
-      "nombre": "agregar",
-      "id": 9
-    },
-    {
-      "nombre": "prueba",
-      "id": 10
-    },
-    {
-      "nombre": "reload",
-      "id": 11
-    },
-    {
-      "nombre": "segunda rpeuba",
-      "id": 12
+      "nombre": "kk",
+      "id": 19
     }
   ]
 }
