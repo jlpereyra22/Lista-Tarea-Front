@@ -23,7 +23,7 @@ const Home = () => {
           </section>
           <AgregarTarea setTarea={setTarea} />
           <hr />
-         <Tareas tarea={tarea} />
+         <Tareas tarea={tarea} setTarea={setTarea} />
         </Container>
         </section>
     );
