@@ -2,6 +2,7 @@ import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/Button";
 import { consultarApi, deleteTareaApi } from "./helpers/queries";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const Items = ({ tarea, setTarea }) => {
   const borrarTarea = (()=>{
@@ -34,9 +35,9 @@ const Items = ({ tarea, setTarea }) => {
     <ListGroup.Item className="d-flex justify-content-between m-1">
       {tarea.nombre}
       <div>
-        <Button className="mx-2" variant="warning">
+        <Link className="mx-2 btn btn-warning" to={`/editar/${tarea.id}`}>
           Editar
-        </Button>
+        </Link>
         <Button variant="danger" onClick={borrarTarea}>Borrar</Button>
       </div>
     </ListGroup.Item>

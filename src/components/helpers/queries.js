@@ -36,3 +36,16 @@ export const deleteTareaApi = async (id) => {
     console.log(error);
   }
 };
+
+export const obtenerTareaApi = async (id) => {
+  try {
+    const respuesta = await fetch(URL + "/" + id);
+    const tareaBuscada = {
+      dato: await respuesta.json(),
+      status: respuesta.status,
+    };
+    return tareaBuscada;
+  } catch (error) {
+    console.log(error)
+  }
+};

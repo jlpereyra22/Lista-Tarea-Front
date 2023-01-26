@@ -1,12 +1,12 @@
 {
   "tareas": [
     {
-      "nombre": "qwer",
-      "id": 26
+      "nombre": "hay que generar la peticion PUT",
+      "id": 28
     },
     {
-      "nombre": "sdafg",
-      "id": 27
+      "nombre": "comencemos con la put",
+      "id": 29
     }
   ]
 }
