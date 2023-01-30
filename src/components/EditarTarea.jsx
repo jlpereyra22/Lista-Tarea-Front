@@ -3,35 +3,48 @@ import { Container } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import { useForm } from "react-hook-form";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 import Swal from "sweetalert2";
-import { obtenerTareaApi } from "./helpers/queries";
+import { editarTareaApi, obtenerTareaApi } from "./helpers/queries";
 
 const EditarTarea = () => {
   useEffect(() => {
     obtenerTareaApi(id).then((respuesta) => {
-      if(respuesta.status===200){
-        setValue("nombre",respuesta.dato.nombre)
-      }else{}
+      if (respuesta.status === 200) {
+        setValue("nombre", respuesta.dato.nombre);
+      } else {
+      }
     });
   }, []);
-  const onSubmit= (producto)=>{
-    console.log(producto)
-  }
-
+  const onSubmit = (item) => {
+    console.log(item);
+    editarTareaApi(id, item).then((respuesta) => {
+      if (respuesta.status === 200) {
+        Swal.fire(
+          "Tarea Modificada",
+          "La Tarea fue Modificada con Exito",
+          "success"
+        );
+        navegacion("/");
+      } else {
+        Swal.fire("Ocurrio un Error", "Intente mas Tarde", "error");
+      }
+    });
+  };
+const navegacion = useNavigate();
   const { id } = useParams();
   console.log(id);
   const {
     register,
-    
+handleSubmit,
     formState: { errors },
-    setValue
-  } = useForm(
-    {defaultValues:{
-        nombre:""
-    }}
-  );
+    setValue,
+  } = useForm({
+    defaultValues: {
+      nombre: "",
+    },
+  });
   return (
     <section className="bg-color">
       <Container className="py-5">
@@ -39,7 +52,7 @@ const EditarTarea = () => {
         <div>
           <h2>Modifique su Tarea</h2>
         </div>
-        <Form className="b-5 row">
+        <Form className="b-5 row" onSubmit={handleSubmit(onSubmit)}>
           <Form.Group className="mb-3" controlId="agregarTarea">
             <Form.Label>Ingrese su tarea</Form.Label>
             <Form.Control

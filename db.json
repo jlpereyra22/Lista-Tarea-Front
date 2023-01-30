@@ -1,11 +1,11 @@
 {
   "tareas": [
     {
-      "nombre": "hay que generar la peticion PUT",
+      "nombre": "tarea modificada",
       "id": 28
     },
     {
-      "nombre": "comencemos con la put",
+      "nombre": "modifcamos 2.0",
       "id": 29
     }
   ]
